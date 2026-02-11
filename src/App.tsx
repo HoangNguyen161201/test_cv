@@ -20,6 +20,7 @@ function App() {
       {/* <Navbar /> */}
       <Routes>
         <Route element={<MainLayout />}>
+          <Route path="/" element={<Navigate to="/products" replace />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/:id" element={<ProductDetail />} />
           <Route element={<ProtectedRoute />}>
